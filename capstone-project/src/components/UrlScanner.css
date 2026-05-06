@@ -1,0 +1,201 @@
+.scanner-section {
+  padding: 0 24px 60px;
+}
+
+.scanner-container {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  box-shadow: var(--shadow-glow);
+}
+
+.scanner-header {
+  margin-bottom: 28px;
+}
+
+.scanner-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.scanner-title svg {
+  color: var(--accent-primary);
+}
+
+.scanner-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.scanner-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.input-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.scanner-input {
+  width: 100%;
+  padding: 14px 40px 14px 42px;
+  background: var(--bg-input);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 15px;
+  transition: all var(--transition);
+}
+
+.scanner-input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.scanner-input::placeholder {
+  color: var(--text-muted);
+}
+
+.scanner-input:disabled {
+  opacity: 0.5;
+}
+
+.input-clear {
+  position: absolute;
+  right: 12px;
+  background: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  padding: 4px;
+  transition: color var(--transition);
+}
+
+.input-clear:hover {
+  color: var(--text-primary);
+}
+
+.scan-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: var(--accent-gradient);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition);
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.scan-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 25px rgba(99, 102, 241, 0.45);
+}
+
+.scan-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.example-urls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.example-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.example-chip {
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 500;
+  transition: all var(--transition);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.example-chip:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.example-chip.safe {
+  border-color: var(--success-border);
+  color: var(--success);
+}
+
+.example-chip.safe:hover {
+  background: var(--success-bg);
+}
+
+.example-chip.danger {
+  border-color: var(--danger-border);
+  color: var(--danger);
+}
+
+.example-chip.danger:hover {
+  background: var(--danger-bg);
+}
+
+.example-chip.warning {
+  border-color: var(--warning-border);
+  color: var(--warning);
+}
+
+.example-chip.warning:hover {
+  background: var(--warning-bg);
+}
+
+@media (max-width: 768px) {
+  .scanner-container {
+    padding: 24px 20px;
+  }
+
+  .scanner-form {
+    flex-direction: column;
+  }
+
+  .scan-button {
+    justify-content: center;
+  }
+}
